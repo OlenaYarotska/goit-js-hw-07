@@ -7,19 +7,14 @@ const galleryImages = createGallery(galleryItems);
 galleryListMarkup.insertAdjacentHTML('beforeend', galleryImages);
 
 function createGallery(items) {
-    return items.map(({ preview, original, description }) => {
-        return`
-        <li>
-            <a class="gallery__item" href="${original}">
-                <img class="gallery__image"
-                 src="${preview}" alt="${description}"
-                  data-title="${description} />
-            </a>
-        </li>
-        `;
-        })
-    .join('');
-};
+    return items.map(
+        ({ preview, original, description }) =>
+            `<li><a class="gallery__item" href=${original}>
+  <img class="gallery__image" src=${preview} alt="${description}" />
+</a></li>`,
+    )-=[[[[[[[[[[[]]]]]]]]]]]
+        .join('');
+}
 
 const gallery = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
