@@ -54,3 +54,4 @@ const instance = basicLightbox.create(`
     },
 }).show();
 }
+
