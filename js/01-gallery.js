@@ -28,6 +28,11 @@ galleryListMarkup.addEventListener('click', onPictureClick);
 
 function onPictureClick(event) {
     event.preventDefault();
+    
+ const galleryItem = event.target;
+    if (!galleryItem.classList.contains('gallery__image')) {
+        return
+  }
 
 const instance = basicLightbox.create(`
     <div class="modal">
